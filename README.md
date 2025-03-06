@@ -1,17 +1,24 @@
 # Simple Todo App
 
-Give a brief description of the project here. Feel free to give it a different name.
+Just a quick, minimal way to help manage tasks and stay organized.
 
 ## Functionality
 
-Give a more detailed explanation of the project and its functionality.
+An all in one spot place to view list of tasks with actions to:
+
+- Create task
+- Set deadlines (optional)
+- Mark tasks off
+- Delete tasks
 
 ## Technology
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+Technologies used: HTML, CSS, and Javascript. Structured code with encapsulated modules to seperate form validation and todo task generation, keeping index.js organized. Using UUID package to prevent todo task conflict.
+
+<img src="screenshots/demo.gif" width="500px" alt="gif demostration of webpage">
 
 ## Deployment
 
 This project is deployed on GitHub Pages:
 
-- ADD LINK HERE
+https://willmarl.github.io/se_project_todo-app/
