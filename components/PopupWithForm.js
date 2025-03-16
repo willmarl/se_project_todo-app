@@ -1,10 +1,15 @@
+import { validationConfig } from "../utils/constants.js";
 import Popup from "./Popup.js";
 export default class PopupWithForm extends Popup {
   constructor({ popupSelector, handleFormSubmit }) {
     super({ popupSelector });
-    this._popupForm = this._popupElement.querySelector(".popup__form");
+    this._popupForm = this._popupElement.querySelector(
+      validationConfig.formSelector
+    );
     this._handleFormSubmit = handleFormSubmit;
-    this._inputList = this._popupForm.querySelectorAll(".popup__input");
+    this._inputList = this._popupForm.querySelectorAll(
+      validationConfig.inputSelector
+    );
   }
 
   _getInputValues() {
