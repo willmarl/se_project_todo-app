@@ -4,13 +4,11 @@ export default class Popup {
     this._popupCloseBtn = this._popupElement.querySelector(".popup__close");
   }
 
-  _handleEscapeClose(evt) {
+  _handleEscapeClose = (evt) => {
     if (evt.key === "Escape") {
-      document
-        .querySelector(".popup_visible")
-        .classList.remove("popup_visible");
+      this.close();
     }
-  }
+  };
 
   open() {
     this._popupElement.classList.add("popup_visible");
@@ -19,13 +17,14 @@ export default class Popup {
 
   close() {
     this._popupElement.classList.remove("popup_visible");
+    document.removeEventListener("keyup", this._handleEscapeClose);
   }
 
   setEventListeners() {
     this._popupElement.addEventListener("click", (evt) => {
       if (
         evt.target.classList.contains("popup__close") ||
-        evt.target.id === "add-todo-popup"
+        evt.target.classList.contains("popup_visible")
       ) {
         this.close();
       }
